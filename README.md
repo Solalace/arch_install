@@ -2,11 +2,11 @@
 
 Made by solace
 
-# Description
+## Description
 
 A bash script to install arch linux from an install media and then 
 
-# How to use
+## How to use
 
 Make sure you have an internet connection, and download the script by using:
 
