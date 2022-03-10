@@ -1,4 +1,4 @@
-# Personal Dotfiles
+# Personal Dotfiles (Intended for VM)
 
 Made by solace
 
