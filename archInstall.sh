@@ -1,11 +1,9 @@
-gonna leave this here rq
-```
 #!/bin/bash
 echo "Solace Arch Linux install Script"
-timesetctl set-ntp true ; loadkeys us
+timedatectl set-ntp true ; loadkeys us
 
 #Partitions
-lsblk
+lsblk ; echo "Enter Your Drive Type, /dev/..."
 read drive ; cfdisk $drive
 echo "Enter file systems for your partitions"
 lsblk
@@ -22,7 +20,7 @@ lsblk
 
 #Install Essential Packages
 echo "Installing Essential Packages..."
-pacstrap /mnt base base-devel linux linux-firmware nano
+pacstrap /mnt base base-devel linux linux-firmware nano -y
 #Making fstab file
 echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
@@ -42,4 +40,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #Creating User
 
 #Finish
-```
