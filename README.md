@@ -4,11 +4,27 @@ Made by solace
 
 ## Description
 
-A bash script to install arch linux from an install media and then 
+OS: Arch
 
-## How to use
+WM:
 
-Make sure you have an internet connection, and download the script by using:
+Shell:
+
+Terminal:
+
+Terminal Font:
+
+System Font:
+
+Fetch:
+
+File Manager:
+
+GTK Theme(s):
+
+## Usage
+
+Download script (with internet connection):
 
     Sample Text 1
 
