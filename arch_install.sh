@@ -38,8 +38,7 @@ lsblk ; echo -e "Enter file system: /dev/... \n do not include numbers\n "
 read drive ; grub-install $drive
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "Enter Root Password: "
-passwd
+echo "Enter Root Password" ; passwd
 
 #Time Zone and Localization
 echo "TimeZone Part"
@@ -49,10 +48,10 @@ en_US.UTF-8 UTF-8\n
 en_US ISO-8859-1  " >> /etc/locale.gen ; locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 #Creating User
-echo -e "Enter machine name: \n" ; read machineName
+echo -e "Enter machine name" ; read machineName
 echo $machineName > /etc/hostname
-echo -e "Enter your username\n" ; read username ; useradd -mg wheel $username ;
-echo -e "Give your user a password\n" ; passwd $username
+echo -e "Enter your username" ; read username ; useradd -mg wheel $username ;
+echo -e "Give your user a password" ; passwd $username
 echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
 
