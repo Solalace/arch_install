@@ -29,6 +29,7 @@ sed '1,/^#ChrootArch$/d' arch_install.sh > /mnt/arch_install.chroot.sh
 chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh
 
 #ChrootArch
+echo "ChrootPart"
 echo "Installing Packages..."
 pacman -S networkmanager grub -y
 echo "Starting NetworkManager..."
@@ -41,6 +42,7 @@ echo "Enter Root Password: "
 passwd
 
 #Time Zone and Localization
+echo "TimeZone Part"
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 echo -ne "
 en_US.UTF-8 UTF-8\n
