@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "Solace Arch Linux install Script\n"
 timedatectl set-ntp true ; loadkeys us
-find /*/arch_install.sh -maxdepth 1 -exec mv {} /tmp \;
+#find /*/arch_install.sh -maxdepth 1 -exec mv {} /tmp \;
 
 #Partitions
 lsblk ; echo "Enter Your Drive Type: /dev/..."
@@ -26,7 +26,7 @@ pacstrap /mnt base base-devel linux linux-firmware nano -y
 echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
 
-sed '1,/^#ChrootArch$/d' tmp/arch_install.sh > /mnt/arch_install.chroot.sh
+sed '1,/^#ChrootArch$/d' /root/Dotfiles/arch_install.sh > /mnt/arch_install.chroot.sh
 chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh
 
 #ChrootArch
