@@ -57,4 +57,5 @@ echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
 
 #Finish and/or Dotfiles
+exit ; echo "Script has now finished, post-installation phase"
 #umount -R /mnt ; reboot
