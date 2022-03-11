@@ -44,7 +44,7 @@ echo "Enter Root Password" ; passwd
 echo "TimeZone Part"
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 echo -ne "
-en_US.UTF-8 UTF-8\n
+en_US.UTF-8 UTF-8
 en_US ISO-8859-1  " >> /etc/locale.gen ; locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 #Creating User
