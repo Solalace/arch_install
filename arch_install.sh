@@ -27,7 +27,7 @@ echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
 
 sed '1,/^#ChrootArch$/d' /root/Dotfiles/arch_install.sh > /mnt/arch_install.chroot.sh
-chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh
+chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh ; exit
 
 #ChrootArch
 echo "ChrootPart"
@@ -57,5 +57,5 @@ echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
 
 #Finish and/or Dotfiles
-exit ; echo "Script has now finished, post-installation phase"
+echo "Script has now finished, post-installation phase"
 #umount -R /mnt ; reboot
