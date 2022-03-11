@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Solace Arch Linux install Script\n"
 timedatectl set-ntp true ; loadkeys us
+find arch_install.sh -maxdepth 1 -exec mv {} .. \;
 
 #Partitions
 lsblk ; echo "Enter Your Drive Type: /dev/..."
