@@ -56,6 +56,20 @@ echo -e "Give your user a password" ; passwd $username
 echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
 
-#Finish and/or Dotfiles
-echo "Script has now finished, post-installation phase"
-umount -R /mnt ; reboot
+echo "Post-installation phase"
+dots_install=/home/$username/arch_dotfiles.sh
+sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
+chown $username:$username $dots_install
+chmod +x $dot_install ; su -c $dots_install -s /bin/sh $username ; exit
+
+#Dotfiles
+cd $HOME ; sudo pacman -S xf86-video-virtio xorg xorg-xinit \
+bspwm sxhkd rofi \
+nitrogen \
+kitty \
+librewolf
+
+
+
+
+#umount -R /mnt ; reboot
