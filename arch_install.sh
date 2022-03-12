@@ -59,4 +59,4 @@ Defaults !tty_tickets" >> /etc/sudoers
 
 #Finish and/or Dotfiles
 echo "Script has now finished, post-installation phase"
-#umount -R /mnt ; reboot
+umount -R /mnt ; reboot
