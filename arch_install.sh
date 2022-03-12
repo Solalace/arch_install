@@ -63,11 +63,19 @@ chown $username:$username $dots_install
 chmod +x $dot_install ; su -c $dots_install -s /bin/sh $username ; exit
 
 #Dotfiles
-cd $HOME ; sudo pacman -S xf86-video-virtio xorg xorg-xinit \
-bspwm sxhkd rofi \
-nitrogen \
-kitty \
-librewolf
+git clone --depth=1 https://github.com/Solalace/bspwm.git ~/.config/bspwm
+sudo make -C ~/config/bspwm
+git clone --depth=1 https://github.com/Solalace/sxhkd.git ~/.config/sxhkd
+sudo make -C ~/config/sxhkd
+git clone --depth=1 https://github.com/Solalace/polybar.git ~/.config/polybar
+sudo make -C ~/config/polybar
+git clone --depth=1 https://github.com/Solalace/dunst.git ~/.config/dunst
+sudo make -C ~/config/dunst
+git clone --depth=1 https://github.com/Solalace/rofi.git ~/.config/rofi
+sudo make -C ~/config/rofi
+
+
+cd $HOME ; git clone https://github.com/Solalace/dots.git ~/
 
 
 
