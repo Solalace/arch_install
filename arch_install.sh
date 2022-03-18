@@ -26,7 +26,7 @@ pacstrap /mnt base base-devel linux linux-firmware nano -y
 echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
 
-sed '1,/^#ChrootArch$/d' ~/Dotfiles/arch_install.sh > /mnt/arch_install.chroot.sh
+sed '1,/^#ChrootArch$/d' /tmp/arch_install.sh > /mnt/arch_install.chroot.sh
 chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh ; exit
 
 #ChrootArch
