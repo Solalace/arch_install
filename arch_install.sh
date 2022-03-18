@@ -57,12 +57,15 @@ echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
 
 echo "Post-installation phase"
-#dots_install=/home/$username/arch_dotfiles.sh
-#sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
-#chown $username:$username $dots_install
-#chmod +x $dot_install ; su -c $dots_install -s /bin/sh $username ; exit
+dots_install=/home/$username/arch_dotfiles.sh
+sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
+chown $username:$username $dots_install
+chmod +x $dots_install ; su -c $dots_install -s /bin/sh $username ; exit
 
 #Dotfiles
-#cd $HOME ; git clone https://github.com/Solalace/dots.git $HOME
+#Installing Packages
+sudo pacman -S xorg xorg-xinit xorg-server xf86-video-intel \
+bspwm sxhkd picom kitty \
+#rofi nitrogen \ 
 
 #umount -R /mnt ; reboot
