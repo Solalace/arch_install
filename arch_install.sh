@@ -42,11 +42,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "Enter Root Password" ; passwd
 
 #Time Zone and Localization
-echo "TimeZone Part"
+echo "Timezone Part"
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
-echo -ne "
-en_US.UTF-8 UTF-8
-en_US ISO-8859-1  " >> /etc/locale.gen ; locale-gen
+echo -e "en_US.UTF-8 UTF-8\nen_US ISO-8859-1" >> /etc/locale.gen ; locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 #Creating User
 echo -e "Enter machine name" ; read machineName
@@ -60,7 +58,7 @@ echo "Post-installation phase"
 dots_install=/home/$username/arch_dotfiles.sh
 sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
 chown $username:$username $dots_install
-chmod +x $dots_install ; su -c $dots_install -s /bin/sh $username ; exit
+chmod +x $dots_install ; sudo -c $dots_install -s /bin/sh $username ; exit
 
 #Dotfiles
 #Installing Packages
