@@ -49,7 +49,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 #Creating User
 echo -e "Enter machine name" ; read machineName
 echo $machineName > /etc/hostname
-echo -e "Enter your username" ; read username ; useradd -mg wheel $username ;
+echo -e "Enter your username" ; read username ; useradd -m -G wheel -s /bin/bash $username
 echo -e "Give your user a password" ; passwd $username
 echo -ne "%wheel ALL=(ALL) ALL
 Defaults !tty_tickets" >> /etc/sudoers
@@ -58,7 +58,7 @@ echo "Post-installation phase"
 dots_install=/home/$username/arch_dotfiles.sh
 sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
 chown $username:$username $dots_install
-chmod +x $dots_install ; sudo -c $dots_install -s /bin/sh $username ; exit
+chmod +x $dots_install ; su -c $dots_install -s /bin/sh $username ; exit
 
 #Dotfiles
 #Installing Packages
