@@ -51,8 +51,7 @@ echo -e "Enter machine name" ; read machineName
 echo $machineName > /etc/hostname
 echo -e "Enter your username" ; read username ; useradd -m -G wheel -s /bin/sh $username
 echo -e "Give your user a password" ; passwd $username
-echo -ne "%wheel ALL=(ALL) ALL
-Defaults !tty_tickets" >> /etc/sudoers
+echo -e "%wheel ALL=(ALL) ALL\nDefaults !tty_tickets" >> /etc/sudoers
 
 echo -e "Post-installation phase\n"
 dots_install=/home/$username/arch_dotfiles.sh
