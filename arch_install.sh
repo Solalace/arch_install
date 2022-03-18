@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "Solace Arch Linux install Script\n"
 timedatectl set-ntp true ; loadkeys us
-#find /*/arch_install.sh -maxdepth 1 -exec mv {} /tmp \;
+find / -name "arch_install.sh" -exec mv {} /tmp \;
 
 #Partitions
 lsblk ; echo "Enter Your Drive Type: /dev/..."
@@ -64,6 +64,5 @@ chmod +x $dot_install ; su -c $dots_install -s /bin/sh $username ; exit
 
 #Dotfiles
 #cd $HOME ; git clone https://github.com/Solalace/dots.git $HOME
-
 
 #umount -R /mnt ; reboot
