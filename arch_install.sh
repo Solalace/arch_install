@@ -50,7 +50,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo -e "Enter machine name" ; read machineName
 echo $machineName > /etc/hostname
 echo -e "Enter your username" ; read username ; useradd -m -G wheel -s /bin/sh $username
-echo -e "%wheel ALL=(ALL) ALL\nDefaults \!tty_tickets" >> /etc/sudoers
+echo -e '%wheel ALL=(ALL) ALL\nDefaults \!tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
