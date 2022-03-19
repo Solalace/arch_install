@@ -21,7 +21,7 @@ lsblk
 
 #Install Essential Packages
 echo "Installing Essential Packages..."
-pacstrap /mnt base base-devel linux linux-firmware nano -y
+pacstrap /mnt --noconfirm base base-devel linux linux-firmware nano
 #Making fstab file
 echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
@@ -32,7 +32,7 @@ chmod +x /mnt/arch_install.chroot.sh ; arch-chroot /mnt ./arch_install.chroot.sh
 #ChrootArch
 echo "ChrootPart"
 echo "Installing Packages..."
-pacman -S networkmanager grub -y
+pacman --noconfirm -S networkmanager grub
 echo "Starting NetworkManager..."
 systemctl enable NetworkManager
 lsblk ; echo -e "Enter file system: /dev/... \n do not include numbers\n "
