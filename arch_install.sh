@@ -57,7 +57,7 @@ echo -e "Post-installation phase\n"
 dots_install=/home/$username/arch_dotfiles.sh
 sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
 sudo chown -R $username:$username $dots_install
-chmod +x $dots_install ; su -c $dots_install -s /bin/sh $username ; exit
+chmod +x $dots_install ; $dots_install ; exit
 
 #Dotfiles
 #Installing Packages
