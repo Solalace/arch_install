@@ -59,9 +59,11 @@ echo -e "Post-installation phase\n"
 # sudo chown -R $username:$username $dots_install
 # chmod +x $dots_install ; su -c $dots_install -s $username ; exit
 
-su -c pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
+sudo su solace <<!
+sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
 bspwm sxhkd picom \
 kitty rofi \
+!
 
 #Dotfiles
 # Installing Packages
