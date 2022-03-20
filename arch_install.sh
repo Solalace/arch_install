@@ -54,15 +54,19 @@ echo -e '%wheel ALL=(ALL) ALL\nDefaults !tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
-dots_install=/home/$username/arch_dotfiles.sh
-sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
-sudo chown -R $username:$username $dots_install
-chmod +x $dots_install ; su -c $dots_install -s $username ; exit
+# dots_install=/home/$username/arch_dotfiles.sh
+# sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
+# sudo chown -R $username:$username $dots_install
+# chmod +x $dots_install ; su -c $dots_install -s $username ; exit
+
+su -c pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
+bspwm sxhkd picom \
+kitty rofi \
 
 #Dotfiles
-#Installing Packages
-sudo pacman -S xorg xorg-xinit xorg-server xf86-video-intel \
-bspwm sxhkd picom kitty \
-#rofi nitrogen \ 
+# Installing Packages
+# sudo pacman -S xorg xorg-xinit xorg-server xf86-video-intel \
+# bspwm sxhkd picom kitty \
+# rofi nitrogen \ 
 
 #umount -R /mnt ; reboot
