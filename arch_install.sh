@@ -62,7 +62,7 @@ echo -e "Post-installation phase\n"
 sudo su solace <<!
 sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
 bspwm sxhkd picom \
-kitty rofi \
+kitty rofi
 !
 
 #Dotfiles
