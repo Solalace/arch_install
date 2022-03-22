@@ -54,8 +54,8 @@ echo -e '%wheel ALL=(ALL) ALL\nDefaults !tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
-#installingPackages
 sudo su solace <<!
+#installingPackages
 sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
 bspwm sxhkd picom \
 kitty rofi
