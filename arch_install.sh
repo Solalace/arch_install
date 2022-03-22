@@ -60,10 +60,12 @@ sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
 bspwm sxhkd picom \
 kitty rofi
 #movingFiles
-cd /home/$username/ ; mkdir .config ; cd .config
-mkdir bspwm sxhkd kitty rofi polybar &
-cp /usr/share/doc/bspwm/examples/bspwmrc /bspwm &
-cp /usr/share/doc/bspwm/examples/sxhkdrc /sxhkd &
-cp /usr/share/doc/kitty/kitty.conf /kitty ; cd ..
-cp /etc/X11/xinit/xinitrc ~/ ; mv xinitrc .xinitrc
-! ; echo "Rebooting..." ; sleep 2 ; umount -R /mnt ; reboot
+cd /home/$username/ ; mkdir ~/.config
+mkdir bspwm sxhkd kitty rofi polybar
+mv bspwm sxhkd kitty rofi polybar ~/.config
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
+cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty
+cp /etc/X11/xinit/xinitrc ~/ ; mv ~/xinitrc ~/.xinitrc
+! 
+echo "Rebooting..." ; sleep 2 ; umount -R /mnt ; reboot
