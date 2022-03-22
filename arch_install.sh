@@ -67,5 +67,4 @@ cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
 cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
 cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty
 cp /etc/X11/xinit/xinitrc ~/ ; mv ~/xinitrc ~/.xinitrc
-! 
-echo "Rebooting..." ; sleep 2 ; umount -R /mnt ; reboot
+!
