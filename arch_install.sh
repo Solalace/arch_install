@@ -54,27 +54,16 @@ echo -e '%wheel ALL=(ALL) ALL\nDefaults !tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
-
-dots_install=/home/$username/arch_dotfiles.sh
-sed '1,/^#Dotfiles$/d' arch_install.chroot.sh > $dots_install
-sudo chown -R root:$username $dots_install
-chmod +x $dots_install ; su -c $dots_install -s $username ; exit
-
-
-#Dotfiles
-sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-qxl \
+#installingPackages
+sudo su solace <<!
+sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
 bspwm sxhkd picom \
-kitty rofi \
-
-#InstallingPackages
-# sudo su solace <<!
-# sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
-# bspwm sxhkd picom \
-# kitty rofi
-# !
-
-# MakingConfigFiles
-# sudo chown -R $username:$username
-# su -c 'cd /home/$username/' -s $username ; exit
-
-#umount -R /mnt ; reboot
+kitty rofi
+#movingFiles
+cd /home/$username/ ; mkdir .config ; cd .config
+mkdir bspwm sxhkd kitty rofi polybar &
+cp /usr/share/doc/bspwm/examples/bspwmrc /bspwm &
+cp /usr/share/doc/bspwm/examples/sxhkdrc /sxhkd &
+cp /usr/share/doc/kitty/kitty.conf /kitty ; cd ..
+cp /etc/X11/xinit/xinitrc ~/ ; mv xinitrc .xinitrc
+! ; echo "Rebooting..." ; sleep 2 ; umount -R /mnt ; reboot
