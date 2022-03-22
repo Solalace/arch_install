@@ -56,7 +56,8 @@ echo -e "Give your user a password" ; passwd $username
 echo -e "Post-installation phase\n"
 sudo su solace <<!
 #installingPackages
-sudo pacman --noconfirm -S xorg xorg-xinit xorg-server xf86-video-intel \
+sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
+qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
 bspwm sxhkd picom \
 kitty rofi
 #movingFiles
