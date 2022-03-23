@@ -64,11 +64,10 @@ ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git \
-pulseaudio alsa-utils \
 firefox
 #yayPackages
-#sudo yay -S ttf-iosevka-nerd nerd-fonts-fira-code \
-#
+#sudo yay --noconfirm -S ttf-iosevka-nerd nerd-fonts-fira-code \
+#polybar pulseaudio alsa-utils
 #movingFiles
 cd /home/$username/ ; mkdir ~/.config
 mkdir bspwm sxhkd kitty rofi polybar
