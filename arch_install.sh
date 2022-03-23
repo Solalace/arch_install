@@ -66,7 +66,7 @@ kitty rofi \
 git \
 firefox
 #yayPackages
-#sudo yay --noconfirm -S ttf-iosevka-nerd nerd-fonts-fira-code \
+#sudo yay --noconfirm -S nerd-fonts-complete \
 #polybar pulseaudio alsa-utils
 #movingFiles
 cd /home/$username/ ; mkdir ~/.config
