@@ -64,6 +64,7 @@ ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 yay git \
+pulseaudio alsa-utils \
 firefox
 #movingFiles
 cd /home/$username/ ; mkdir ~/.config
