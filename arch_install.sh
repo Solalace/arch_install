@@ -58,8 +58,12 @@ sudo su solace <<!
 #installingPackages
 sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
 qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
-bspwm sxhkd picom \
-kitty rofi
+noto-fonts noto-fonts-emoji noto-fonts-cjk \
+ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+bspwm sxhkd picom nitrogen \
+kitty rofi \
+yay git \
+firefox
 #movingFiles
 cd /home/$username/ ; mkdir ~/.config
 mkdir bspwm sxhkd kitty rofi polybar
