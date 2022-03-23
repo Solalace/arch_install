@@ -58,6 +58,7 @@ sudo su solace <<!
 #installingPackages
 sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
 qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
+adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts \
 noto-fonts noto-fonts-emoji noto-fonts-cjk \
 ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 bspwm sxhkd picom nitrogen \
