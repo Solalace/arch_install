@@ -61,12 +61,14 @@ qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
 adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts \
 noto-fonts noto-fonts-emoji noto-fonts-cjk \
 ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-ttf-iosevka-nerd nerd-fonts-fira-code \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
-yay git \
+git \
 pulseaudio alsa-utils \
 firefox
+#yayPackages
+#sudo yay -S ttf-iosevka-nerd nerd-fonts-fira-code \
+#
 #movingFiles
 cd /home/$username/ ; mkdir ~/.config
 mkdir bspwm sxhkd kitty rofi polybar
