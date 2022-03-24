@@ -64,17 +64,9 @@ ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git \
-firefox
+librewolf
+#firefox
 #yayPackages
 #sudo yay --noconfirm -S nerd-fonts-complete \
-#ttf-font-awesome-6.1.0-1 otf-font-awesome-6.1.0-1 \
 #polybar pulseaudio alsa-utils
-#movingFiles
-cd /home/$username/ ; mkdir ~/.config
-mkdir bspwm sxhkd kitty rofi polybar
-mv bspwm sxhkd kitty rofi polybar ~/.config
-cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
-cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
-cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty
-cp /etc/X11/xinit/xinitrc ~/ ; mv ~/xinitrc ~/.xinitrc
 !
