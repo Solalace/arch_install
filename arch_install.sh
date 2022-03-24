@@ -60,7 +60,8 @@ sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
 qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
 adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts \
 noto-fonts noto-fonts-emoji noto-fonts-cjk \
-ttf-jetbrains-mono ttf-joypixels ttf-font-awesome otf-font-awesome \
+ttf-font-awesome-6.1.0-1 otf-font-awesome-6.1.0-1 \
+ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git \
