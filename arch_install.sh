@@ -64,5 +64,5 @@ ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git
-cd ~/ ; https://github.com/Solalace/dots.git
+cd ~/ ; git clone https://github.com/Solalace/dots.git
 !
