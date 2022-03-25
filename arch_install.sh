@@ -64,9 +64,10 @@ ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git \
-#firefox
-#yayPackages
-#sudo yay --noconfirm -S nerd-fonts-complete \
-#polybar pulseaudio alsa-utils
-#librewolf
 !
+cd /usr/share/ ; git clone https://aur.archlinux.org/yay.git
+cd yay ; makepkg -si ; cd ~/
+#yayPackages
+sudo yay --noconfirm -S nerd-fonts-complete \
+polybar pulseaudio alsa-utils \
+librewolf
