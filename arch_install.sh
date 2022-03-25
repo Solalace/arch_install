@@ -66,4 +66,3 @@ kitty rofi \
 git
 cd ~/ ; https://github.com/Solalace/dots.git
 !
-umount -R /mnt ; reboot
