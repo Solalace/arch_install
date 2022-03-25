@@ -63,7 +63,7 @@ noto-fonts noto-fonts-emoji noto-fonts-cjk \
 ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
-git \
+git
 !
 cd /usr/share/ ; git clone https://aur.archlinux.org/yay.git
 cd yay ; makepkg -si ; cd ~/
