@@ -64,9 +64,9 @@ ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git \
-librewolf
 #firefox
 #yayPackages
 #sudo yay --noconfirm -S nerd-fonts-complete \
 #polybar pulseaudio alsa-utils
+#librewolf
 !
