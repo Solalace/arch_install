@@ -64,8 +64,6 @@ ttf-jetbrains-mono ttf-joypixels \
 bspwm sxhkd picom nitrogen \
 kitty rofi \
 git
+cd ~/ ; https://github.com/Solalace/dots.git
 !
-#yayPackages
-#yay --noconfirm -S nerd-fonts-complete \
-#polybar pulseaudio alsa-utils \
-#librewolf
+umount -R /mnt ; reboot
