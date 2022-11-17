@@ -54,15 +54,15 @@ echo -e '%wheel ALL=(ALL) ALL\nDefaults !tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
-sudo su solace <<!
-#installingPackages
-sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
-qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
-adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts \
-noto-fonts noto-fonts-emoji noto-fonts-cjk \
-ttf-jetbrains-mono ttf-joypixels \
-bspwm sxhkd picom nitrogen \
-kitty rofi \
-git
 cd ~/ ; git clone https://github.com/Solalace/dots.git
-!
+#sudo su solace <<!
+#installingPackages
+#sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
+#qemu-guest-agent spice-vdagent xf86-video-intel xf86-video-qxl \
+#adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts \
+#noto-fonts noto-fonts-emoji noto-fonts-cjk \
+#ttf-jetbrains-mono ttf-joypixels \
+#bspwm sxhkd picom nitrogen \
+#kitty rofi \
+#git
+#!
