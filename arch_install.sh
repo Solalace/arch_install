@@ -21,7 +21,7 @@ lsblk
 
 #Install Essential Packages
 echo "Installing Essential Packages..."
-pacstrap /mnt --noconfirm base base-devel linux linux-firmware nano
+pacstrap /mnt --noconfirm base base-devel linux-zen linux-firmware vim
 #Making fstab file
 echo "Making fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab ; genfstab -U /mnt
@@ -54,7 +54,6 @@ echo -e '%wheel ALL=(ALL) ALL\nDefaults !tty_tickets' >> /etc/sudoers
 echo -e "Give your user a password" ; passwd $username
 
 echo -e "Post-installation phase\n"
-cd ~/ ; git clone https://github.com/Solalace/dots.git
 #sudo su solace <<!
 #installingPackages
 #sudo pacman --noconfirm -S xorg xorg-xinit xorg-server \
